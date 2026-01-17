@@ -1,0 +1,31 @@
+[project]
+name = "zed-eval"
+version = "0.1.0"
+description = "Zed Evals Environment Setup"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.0",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "testcontainers>=4.0.0",
+]
+
+[project.scripts]
+zed-eval = "zed_eval.main:zed_eval_entry_point"
+zed-resume = "zed_eval.main:resume_zed_eval_entry_point"
+zed-upload = "zed_eval.main:zed_upload_entry_point"
+zed-lint = "zed_eval.lint:main"
