@@ -1,6 +1,6 @@
 [project]
 name = "zed-eval"
-version = "0.1.0"
+version = "0.2.0"
 description = "Zed Evals Environment Setup"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -28,4 +28,8 @@ dev = [
 zed-eval = "zed_eval.main:zed_eval_entry_point"
 zed-resume = "zed_eval.main:resume_zed_eval_entry_point"
 zed-upload = "zed_eval.main:zed_upload_entry_point"
+zed-save = "zed_eval.main:zed_save_images_entry_point"
 zed-lint = "zed_eval.lint:main"
+zed-cursor = "zed_eval.connect:cursor_entrypoint"
+zed-vscode = "zed_eval.connect:vscode_entrypoint"
+zed-version = "zed_eval.version_check:main"
